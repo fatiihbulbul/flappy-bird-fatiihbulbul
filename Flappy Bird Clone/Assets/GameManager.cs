@@ -5,17 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject gameOverCanvas;
+    public GameObject playButton;
+    public GameObject gameOver;
+    public GameObject logo;
 
     private void Start()
     {
         Time.timeScale = 1;
+        playButton.SetActive(false);
+        gameOver.SetActive(false);
+        logo.SetActive(false);
     }
 
     public void GameOver()
     {
-        gameOverCanvas.SetActive(true);
         Time.timeScale = 0;
+        playButton.SetActive(true);
+        gameOver.SetActive(true);
+        logo.SetActive(true);
+        
     }
 
     public void Retry()
