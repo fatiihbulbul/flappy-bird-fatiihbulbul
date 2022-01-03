@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
         playButton.SetActive(true);
         gameOver.SetActive(true);
         logo.SetActive(true);
-        
     }
 
     public void Retry()
